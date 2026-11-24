@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQI College of ICT | National Diploma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS: CSS file only, no JavaScript -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --navy: #10165f;
+            --blue: #1927a5;
+            --orange: #f47b20;
+        }
+
+        .navy {
+            background: var(--navy);
+        }
+
+        .blue {
+            background: var(--blue);
+        }
+
+        .orange {
+            background: var(--orange);
+        }
+
+        .text-navy {
+            color: var(--navy);
+        }
+
+        .text-orange {
+            color: var(--orange);
+        }
+
+        .hero {
+            min-height: 600px;
+            background:
+                linear-gradient(90deg, rgba(10,18,100,.96), rgba(20,35,180,.75)),
+                url(imgi_12_sqi-matriculating-students.jpg) center/cover;
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: .3s;
+            z-index: 1;
+        }
+
+        .btn:before {
+            content: "";
+            position: absolute;
+            background: var(--navy);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 100%;
+            transition: .3s;
+            z-index: -1;
+        }
+
+        .btn:hover:before {
+            top: 0;
+        }
+
+        .btn:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .course-card {
+            transition: .3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.13);
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        #menu-toggle:checked ~ .mobile-menu {
+            display: block;
+        }
+
+        .faq summary {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq[open] .arrow {
+            transform: rotate(180deg);
+        }
+
+        .arrow {
+            transition: .3s;
+        }
+
+        @media(max-width: 768px) {
+            .hero {
+                min-height: 520px;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .section-padding {
+                padding: 65px 20px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .course-card img {
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAVIGATION -->
+<header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+        <a href="#home" class="flex items-center">
+            <div><img width="50pxpx" src="../Home - Study at SQI... Succeed Anywhere!!!/imgi_1_imgi_2_SQI-COLLEGE-OF-ICT-LOGO-WEB-2-1 (1).png" alt="">
+            </div>
+        </a>
+
+        <nav class="desktop-nav flex items-center space-x-6 text-sm font-semibold">
+            <a href="#about" class="hover:text-orange-500">About</a>
+            <a href="#programmes" class="text-blue-800">Programmes</a>
+            <a href="#admissions" class="hover:text-orange-500">Admissions</a>
+            <a href="#portal" class="hover:text-orange-500">E-Portal</a>
+            <a href="#scholarship" class="hover:text-orange-500">SQI Scholarship</a>
+            <a href="#news" class="hover:text-orange-500">News</a>
+            <a href="#contact" class="hover:text-orange-500">Contact</a>
+        </nav>
+
+        <!-- CSS MOBILE MENU -->
+        <input type="checkbox" id="menu-toggle" class="hidden">
+
+        <label for="menu-toggle" class="md:hidden cursor-pointer text-3xl text-navy">
+            ☰
+        </label>
+
+        <div class="mobile-menu absolute top-full left-0 w-full bg-white shadow-lg p-5">
+            <nav class="flex flex-col space-y-4 font-semibold">
+                <a href="#about">About</a>
+                <a href="#programmes">Programmes</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#portal">E-Portal</a>
+                <a href="#scholarship">SQI Scholarship</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section id="home" class="hero flex items-center">
+    <div class="max-w-7xl mx-auto px-6 w-full py-20">
+
+        <div class="max-w-2xl text-white">
+
+            <span class="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm mb-6">
+                NATIONAL DIPLOMA PROGRAMME
+            </span>
+
+            <h1>
+                BEYOUND EDUCATION,EMPOWERING FUTURES!
+            </h1>
+
+            <h2 class="text-2xl font-semibold mt-6">
+                Study at SQI College of ICT
+            </h2>
+
+            <p class="mt-5 text-blue-100 leading-7">
+                Build practical skills, gain professional knowledge
+                and prepare yourself for opportunities in the
+                technology-driven world.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-8">
+
+                <a href="#programmes"
+                   class="btn orange text-white px-7 py-4 rounded-lg font-bold">
+                    Explore Courses →
+                </a>
+
+                <a href="#admissions"
+                   class="border border-white px-7 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-900">
+                    How to Apply
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- QUICK LINKS -->
+<section id="about" class="max-w-7xl mx-auto px-5 -mt-8 relative">
+
+    <div class="grid md:grid-cols-2 rounded-xl overflow-hidden shadow-xl">
+
+        <div class="bg-blue-100 p-10">
+            <h3 class="text-xl font-bold text-navy">
+                 Our ND Courses
+            </h3>
+
+            <p class="mt-4 text-gray-600 leading-7">
+                Check out our available courses for National
+                Diploma programmes.
+            </p>
+
+            <a href="#programmes" class="text-blue-800 font-bold inline-block mt-5">
+                View Courses →
+            </a>
+        </div>
+
+        <div id="admissions" class="navy text-white p-10">
+            <h3 class="text-xl font-bold">
+                 Admissions & Tuition
+            </h3>
+
+            <p class="mt-4 text-blue-100 leading-7">
+                Download our detailed tuition fee breakdown
+                to explore the costs for each course and programme.
+            </p>
+
+            <a href="#contact" class="font-bold inline-block mt-5">
+                Contact Admissions →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section class="max-w-7xl mx-auto px-5 py-24">
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <img src="imgi_7_sqi-monotechnic-web-480x270.jpg" alt="">
+        </div>
+
+        <div>
+
+            <span class="text-orange font-bold uppercase text-sm">
+                Learn. Practise. Excel.
+            </span>
+
+            <h2 class="text-4xl font-bold text-navy mt-4 leading-tight">
+                Our students graduate with both the skills and certificate to excel globally!
+            </h2>
+
+            <p class="text-gray-600 mt-6 leading-8">
+                With the accredited MONOTECHNIC status, SQI now
+                offers a range of industry-relevant ICT-based
+                National Diploma programmes with the same
+                practical approach.
+            </p>
+
+            <p class="text-gray-600 mt-4 leading-8">
+                Students are trained with practical knowledge
+                and skills that prepare them for opportunities
+                in the modern workplace.
+            </p>
+
+            <a href="#programmes"
+               class="inline-block mt-6 text-blue-800 font-bold">
+                Discover Our Programmes →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AVAILABLE COURSES -->
+<section id="programmes" class="bg-gray-50 py-24">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="text-center mb-14">
+
+            <span class="text-orange font-bold uppercase text-sm">
+                Find Your Path
+            </span>
+
+            <h2 class="text-4xl font-bold text-navy mt-3">
+                Available Courses
+            </h2>
+
+            <p class="text-gray-600 mt-4">
+                See our available National Diploma (ND) Courses.
+            </p>
+
+        </div>
+
+        <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <-- COURSE 1 -->
+            <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg flex">
+
+                <img src="imgi_20_computer-science-480x270.jpg" alt="">
+
+                    <h3 class="text-xl font-bold text-navy">
+                        Computer Science
+                        <span class="text-orange">+ AI</span>
+                    </h3>
+
+                    <p class="text-xs font-bold mt-3 text-gray-500">
+                        Faculty of Engineering and Technology
+                    </p>
+
+                    <p class="text-gray-600 mt-4 leading-7">
+                        The Computer Science programme provides
+                        in-depth knowledge of programming,
+                        software development, data structures
+                        and artificial intelligence.
+                    </p>
+
+                    <a href="#contact"
+                       class="inline-block mt-6 font-bold text-blue-800">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 2 -->
+            <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg flex">
+
+              I <img src="imgi_22_accountancy-sqi-480x270.jpg" alt="">
+
+                <div class="p-7">
+
+                    <h3 class="text-xl font-bold text-navy">
+                        Accountancy
+                        <span class="text-orange">+ AI</span>
+                    </h3>
+
+                    <p class="text-xs font-bold mt-3 text-gray-500">
+                        Faculty of Administration and Technology
+                    </p>
+
+                    <p class="text-gray-600 mt-4 leading-7">
+                        Our accountancy programme is integrated
+                        with ICT, equipping students with
+                        accounting and financial reporting
+                        skills while leveraging modern
+                        digital tools and technologies.
+                    </p>
+
+                    <a href="#contact"
+                       class="inline-block mt-6 font-bold text-blue-800">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 3 -->
+            <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg flex">
+                    <img src="imgi_25_bus-admin-480x270.jpg" alt="">
+                    <h3 class="text-xl font-bold text-navy">
+                        Business Administration & Management
+                        <span class="text-orange">+ AI</span>
+                    </h3>
+
+                    <p class="text-xs font-bold mt-3 text-gray-500">
+                        Faculty of Administration and Technology
+                    </p>
+
+                    <p class="text-gray-600 mt-4 leading-7">
+                        Our Business Management and
+                        Administration programme blends ICT
+                        with core business principles,
+                        equipping students with both
+                        business and technology skills.
+                    </p>
+
+                    <a href="#contact"
+                       class="inline-block mt-6 font-bold text-blue-800">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE SQI -->
+<section class="navy text-white">
+
+    <div class="grid md:grid-cols-2">
+
+        <div class="orange p-10 md:p-16">
+
+            <h2 class="text-4xl font-bold leading-tight">
+                Why Choose SQI College of ICT?
+            </h2>
+
+            <p class="mt-7 leading-8">
+                At SQI College of ICT, we are dedicated to
+                nurturing the next generation of tech leaders.
+                Our National Diploma (ND) programmes are designed
+                to provide students with the practical skills
+                and knowledge needed to excel in the rapidly
+                evolving tech industry.
+            </p>
+
+            <p class="mt-6 leading-8">
+                With a focus on 80% hands-on training,
+                our students are not only prepared for the
+                job market but also equipped to secure
+                remote jobs even before graduation.
+            </p>
+
+        </div>
+
+
+        <div class="p-10 md:p-16">
+
+            <div class="mb-10">
+
+                <h3 class="text-2xl font-bold">
+                    Get the skills
+                </h3>
+
+                <p class="mt-4 leading-7 text-blue-100">
+                    SQI integrates quality, convenience and
+                    modern technology into education,
+                    bridging the gap between theory and
+                    real-world application.
+                </p>
+
+            </div>
+
+
+            <div class="mb-10">
+
+                <h3 class="text-2xl font-bold">
+                    Get the certificate
+                </h3>
+
+                <p class="mt-4 leading-7 text-blue-100">
+                    The National Diploma (ND) offered at
+                    SQI College of ICT is a two-year approved
+                    academic programme of the National Board
+                    for Technical Education (NBTE).
+                </p>
+
+            </div>
+
+
+            <div class="mb-10">
+
+                <h3 class="text-2xl font-bold">
+                    Get the job
+                </h3>
+
+                <p class="mt-4 leading-7 text-blue-100">
+                    Students develop practical skills and
+                    prepare for employment opportunities
+                    after graduation.
+                </p>
+
+            </div>
+
+            <a href="#contact"
+               class="btn orange inline-block px-8 py-4 rounded-lg font-bold">
+                Start Now →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ADMISSION CTA -->
+<section class="bg-gray-50 py-20 px-5">
+
+    <div class="max-w-7xl mx-auto navy text-white rounded-xl p-10 md:p-14 flex flex-col md:flex-row justify-between items-center gap-8">
+
+        <div>
+
+            <h2 class="text-3xl font-bold">
+                Not sure where you fall?
+                Chat with Admissions.
+            </h2>
+
+            <p class="mt-4 text-blue-100">
+                Our admissions team is available to help you.
+            </p>
+
+        </div>
+
+        <a href="#contact"
+           class="btn orange px-8 py-4 rounded-lg font-bold whitespace-no-wrap">
+            Reach Out →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ SECTION -->
+<section class="max-w-5xl mx-auto px-5 py-24">
+
+    <div class="text-center mb-12">
+
+        <h2 class="text-4xl font-bold text-navy">
+            Frequently Asked Questions
+        </h2>
+
+    </div>
+
+
+    <div class="border-t border-gray-200">
+
+        <details class="faq border-b py-6" open>
+
+            <summary class="flex justify-between font-bold">
+                Is SQI deviating from its core ICT focus?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                No! SQI is taking ICT where it belongs.
+                The function of ICT is to empower other
+                industries and should not be standalone.
+                Every industry today requires knowledge
+                of ICT, and schools should no longer be
+                delivering any course without it.
+                This is what SQI is pioneering.
+                Our accredited Accountancy and Business
+                Administration courses integrate ICT.
+            </p>
+
+        </details>
+
+
+        <details class="faq border-b py-6">
+
+            <summary class="flex justify-between font-bold">
+                Is the school accredited, and if so, by what accrediting body?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                The National Diploma programme is described
+                as an approved academic programme of the
+                National Board for Technical Education (NBTE).
+                Contact Admissions for current details.
+            </p>
+
+        </details>
+
+
+        <details class="faq border-b py-6">
+
+            <summary class="flex justify-between font-bold">
+                Can I obtain a degree certificate at SQI?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                Contact the Admissions team for information
+                about qualifications available for your
+                chosen programme.
+            </p>
+
+        </details>
+
+
+        <details class="faq border-b py-6">
+
+            <summary class="flex justify-between font-bold">
+                Do the HND students go for NYSC?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                Eligibility depends on the qualification
+                and applicable NYSC requirements.
+                Please confirm with the school.
+            </p>
+
+        </details>
+
+
+        <details class="faq border-b py-6">
+
+            <summary class="flex justify-between font-bold">
+                Can I apply online?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                Visit the official SQI website or contact
+                Admissions for the current application process.
+            </p>
+
+        </details>
+
+
+        <details class="faq border-b py-6">
+
+            <summary class="flex justify-between font-bold">
+                How much is the school fees?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                Tuition fees may vary by programme and
+                academic session. Contact Admissions
+                for the latest fee schedule.
+            </p>
+
+        </details>
+
+
+        <details class="faq border-b py-6">
+
+            <summary class="flex justify-between font-bold">
+                Does the college go on strike?
+                <span class="arrow text-blue-800">⌄</span>
+            </summary>
+
+            <p class="mt-5 text-gray-600 leading-7">
+                Contact the college for updates about
+                its current academic calendar.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gray-900 text-white">
+
+    <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <div class="md:col-span-2">
+
+            <h2 class="text-2xl font-bold">
+                SQI College of ICT
+            </h2>
+
+            <p class="text-gray-400 mt-5 leading-7 max-w-md">
+                Beyond Education, Empowering Futures.
+                Practical learning for a technology-driven world.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3 class="font-bold text-lg">
+                Quick Links
+            </h3>
+
+            <ul class="mt-5 space-y-4 text-gray-400">
+                <li><a href="#about" class="hover:text-orange-400">About</a></li>
+                <li><a href="#programmes" class="hover:text-orange-400">Programmes</a></li>
+                <li><a href="#admissions" class="hover:text-orange-400">Admissions</a></li>
+                <li><a href="#contact" class="hover:text-orange-400">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3 class="font-bold text-lg">
+                Contact Us
+            </h3>
+
+            <p class="mt-5 text-gray-400 leading-7">
+                For admission enquiries, course information
+                and tuition details, visit the official
+                SQI College of ICT website.
+            </p>
+
+            <a href="https://sqi.edu.ng/national-diploma/"
+               class="inline-block mt-5 text-orange-400 font-bold">
+                Official Website →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="border-t border-gray-700 text-center py-6 text-gray-400 text-sm">
+        © 2026 SQI College of ICT. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- FLOATING CONTACT BUTTON -->
+<a href="#contact"
+   class="fixed bottom-6 left-5 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+    </svg>
+</a>
+
+</body>
+</html>
